@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Chained World</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="css/estilo.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <style>
+        /* Estilos para el texto "Formulario de Contacto" */
+        #titulo-formulario {
+            text-align: center; /* Centrar el texto */
+            font-family: 'Bebas Neue', sans-serif; /* Cambiar la tipografía */
+            font-size: 24px; /* Tamaño de la fuente */
+            margin-top: 30px; /* Espacio superior */
+        }
+        
+        /* Estilos para el formulario de contacto */
+        #formulario-contacto {
+            width: 80%; /* Ancho del formulario */
+            margin: auto; /* Centrar horizontalmente */
+            margin-top: 50px; /* Espacio en la parte superior */
+            padding: 20px; /* Espacio interno */
+            border: 1px solid #ccc; /* Borde */
+            border-radius: 8px; /* Borde redondeado */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        #formulario-contacto label,
+        #formulario-contacto input,
+        #formulario-contacto textarea,
+        #formulario-contacto button {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%; /* Ancho completo */
+            box-sizing: border-box; /* Incluir padding en el ancho total */
+        }
+
+        #formulario-contacto button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head> 
+<body>     
+    <div class="hamburguesa" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div id="logo-contacto"> 
+        <a href="http://127.0.0.1:3000/Users/trinidad/Documents/chained_world/index.html">
+            <img src="imagenes/logo-sinFondo.png" alt="logo sitio">
+        </a>
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="cuidados.html">Cuidados</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="giftcard.html">Gift Card</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p class="texto-contacto">
+            <a href="https://wa.link/rlzvwm">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </p>
+        <p class="texto-contacto">
+            trinifochi0@gmail.com
+        </p>
+     
+        <h2 id="titulo-formulario">Formulario de Contacto</h2>
+        
+        <form id="formulario-contacto" action="/enviar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    
+    <footer> 
+        <hr class="linea-footer">
+        <h3 class="fab fa-instagram"></h3>
+        <a href="https://www.instagram.com/cha1nedw0rld_?igsh=ZjIyc2dzbXZsdWRo&utm_source=qr">cha1nedw0rld</a>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

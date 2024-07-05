@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Chained World</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="css/estilo.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <div class="hamburguesa" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div id="logo"> 
+        <img src="imagenes/logo-sinFondo.png" alt="logo sitio">
+    </div>
+</head> 
+<body>     
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="cuidados.html">Cuidados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="giftcard.html">Gift Card</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+
+   <main
+   style="position: relative;">
+   
+<figure style="position: relative; display: block; text-align: center;">
+    <video autoplay loop muted style="max-width: 80%; height: auto; border: 2px solid #ccc; border-radius: 10px; margin: auto;">
+        <source src="imagenes/copy_82C05D4D-0AE3-4C75-93F9-6A4DA651E313.MOV" type="video/mp4">
+    </video>
+</figure>
+
+<div style="text-align: center;"> <!-- Agregamos text-align: center; para centrar horizontalmente -->
+    <img src="imagenes/fraseindex.jpg" style="width: 70%; height: auto; margin: 50px auto;"> <!-- Utilizamos margin: 50px auto; para centrar horizontalmente -->
+</div>
+
+ 
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="imagenes/maru-3.jpg" alt="Imagen 1">
+        <img src="imagenes/maru-3-2.jpg" alt="Imagen 2">
+        <img src="imagenes/maru-4.jpg" alt="Imagen 3">
+        <!-- Agrega más imágenes según sea necesario -->
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+   </main>
+
+
+    
+
+    <footer> 
+
+        <hr class="linea-footer">
+        <h3 class="fab fa-instagram"></h3>
+        <a href="https://www.instagram.com/cha1nedw0rld_?igsh=ZjIyc2dzbXZsdWRo&utm_source=qr">cha1nedw0rld</a>
+    </footer>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var menuItems = document.querySelectorAll("#menu ul li a");
+        menuItems.forEach(function(item) {
+            item.addEventListener("click", function(event) {
+                // Evita el comportamiento predeterminado de los enlaces
+                event.preventDefault();
+                // Obtiene la URL de destino del enlace
+                var targetUrl = this.getAttribute("href");
+                // Redirige a la página correspondiente
+                window.location.href = targetUrl;
+            });
+        });
+    });
+</script>
+<script>
+    function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
+<script>
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll('.carousel-images img');
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    slides.forEach((slide) => {
+        slide.style.display = 'none';
+    });
+    slides[slideIndex].style.display = 'block';
+}
+
+function nextSlide() {
+    slideIndex++;
+    showSlides();
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlides();
+}
+
+showSlides();
+</script>
+</html>
+
+
+
+
